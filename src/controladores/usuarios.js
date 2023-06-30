@@ -6,10 +6,6 @@ const senhajwt = require("../../senhajwt")
 const cadastro = async (req, res) => {
     const {nome, email, senha} = req.body;
     
-    if(!nome || ! email || !senha){
-        return res.status(400).json({mensagem: "Campos obrigatórios"})
-    
-    }
    
     
     try {
@@ -41,13 +37,10 @@ const cadastro = async (req, res) => {
         return res.status(500).json(error.message)
     }
     }
+    
     const login = async (req, res) => {
         const {email, senha} = req.body;
         
-        if(!email || !senha){
-            return res.status(400).json({mensagem: "Campos obrigatórios"})
-        
-        }
         
         try {
             const {rows, rowCount} = await pool.query(

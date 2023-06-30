@@ -8,7 +8,7 @@ if(!nome || !tipo || !apelido){
 return res.status(400).json({mensagem: "Dados obrigatórios"})
 }
 
-console.log(req.body)
+
 
 try {
     const query = ` insert into animal (usuario_id, nome, tipo, apelido )

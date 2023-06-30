@@ -36,7 +36,7 @@ next()
 
     
 } catch (error) {
-    return res.status(401).json({mensagem: "Não autorizado midleraware"})
+    return res.status(401).json(error.message)
 }
 
 
