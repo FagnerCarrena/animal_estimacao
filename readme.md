@@ -12,6 +12,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Nodejs](https://nodejs.org/en)
 - [bcrypt](https://www.npmjs.com/package/bcrypt)
 - [JWT](https://jwt.io/)
+- [Joi](https://www.npmjs.com/package/joi)
 
 ---
 
