@@ -4,12 +4,6 @@ const pool = require("../conexao")
 const cadastrarAnimal = async (req, res) => {
 const{nome, tipo,  apelido} = req.body;
 
-if(!nome || !tipo || !apelido){
-return res.status(400).json({mensagem: "Dados obrigatórios"})
-}
-
-
-
 try {
     const query = ` insert into animal (usuario_id, nome, tipo, apelido )
     values ($1, $2, $3, $4) returning * `
@@ -29,12 +23,6 @@ try {
 const atualizarAnimal = async (req, res) => {
     const{nome, tipo,  apelido} = req.body;
 	const { id } = req.params
-
-    if(!nome & !tipo & !apelido){
-return res.json({mensagem: "Falta dados"})
-    }
-
-    
 
     try {
         const { rowCount } = await pool.query(

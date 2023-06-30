@@ -1,0 +1,22 @@
+const joi = require('joi')
+
+const schemaAnimal = joi.object({
+	nome: joi.string().required().messages({
+		'any.required': 'O campo nome é obrigatório',
+		'string.empty': 'O campo nome é obrigatório',
+	}),
+
+	tipo: joi.string().required().messages({
+		
+		'any.required': 'O campo tipo é obrigatório',
+		'string.empty': 'O campo tipo é obrigatório',
+	}),
+
+	apelido: joi.string().min(3).required().messages({
+		'any.required': 'O campo apelido é obrigatório',
+		'string.empty': 'O campo apelido é obrigatório',
+		'string.min': 'O apelido precisa conter, no mínimo, 3 caracteres',
+	})
+})
+
+module.exports = schemaAnimal
