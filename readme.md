@@ -1,4 +1,4 @@
-####Animal_estimacao
+####   Animal_estimacao
 
 ## 👌Sobre
 
@@ -10,6 +10,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [Express.js](https://expressjs.com/pt-br/)
 - [Nodejs](https://nodejs.org/en)
+- [bcrypt](https://www.npmjs.com/package/bcrypt)
+- [JWT](https://jwt.io/)
 
 ---
 
